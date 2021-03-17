@@ -1,17 +1,18 @@
 <?php
 
-	require_once('/Applications/MAMP/htdocs/Mock_test_1/search_library/search.php');
 
-	require_once('/Applications/MAMP/htdocs/Mock_test_1/pagination1.0/prepared_query.php');
 
+	require_once('../search_library/search.php');
+
+	require_once('../pagination1.0/prepared_query.php');
 
 	$application_obj = new ManageApp();
 
 	$connection_mock_chat = NULL;
-
+ 
 	$application_obj->Myconnection ($connection_mock_chat,"localhost","root","Mock_test_db");
 	$table_heading_name=array('Name','Email','Phone Number','Gender');
-	$table_column_name=array('name','email','phoneNum','gender');
+	$table_column_name=array('Name','Email','Phone','Gender');
 	$where=1;
 	if($_POST['request'] == 'data')
 	{  
@@ -97,7 +98,7 @@
 
 	        $user='root';
 
-			$connection= mysqli_connect ($host, $user, "root" , $db); 
+			$connection= mysqli_connect ($host, $user, "root123" , $db); 
 			if (!$connection) 
 			{
 				die ( "no connection found" . mysqli_error($connection));

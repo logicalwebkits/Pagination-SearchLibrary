@@ -207,7 +207,8 @@
                     this.max_page1=1;
                 }
             }
-            console.log(type);
+            
+       
             manage_buffer.html_fun(this.max_page1);
            
         }
@@ -221,8 +222,9 @@
 
             $(document).ready(function()
             { 
-                $("head").append('<script type="text/javascript" src="/./Mock_test_1/pagination1.0/simplePagination.js-master/jquery.simplePagination.js"></script>');
-                $("head").append('<link rel="stylesheet" href="/./Mock_test_1/pagination1.0/simplePagination.js-master/simplePagination.css">');
+                $("head").append('<script type="text/javascript" src="pagination1.0/simplePagination.js-master/jquery.simplePagination.js"></script>');
+                $("head").append('<link rel="stylesheet" href="pagination1.0/simplePagination.js-master/simplePagination.css">');
+
 
                 $("#"+pagi_id).pagination(
                 {      
@@ -321,8 +323,12 @@
             }
 
             tth='';
+
+
             $.each(manage_buffer.table_heading_names, function(index, value)
             {
+				        
+
                 tth+='<th>'+value+'</th>';
             });
             if(manage_buffer.search_div_counter==0)
@@ -343,9 +349,14 @@
             {   
                 var ttd='';
                 var value_of_id='';
+                
+				            
+				            
                 $.each(manage_buffer.table_coulmn_names, function(index,valueOfColumn)
                 {                       
                     
+				            console.log(value);
+				            console.log(valueOfColumn);
 
                     if(valueOfColumn=='id')
                     {
